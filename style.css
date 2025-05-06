@@ -1,0 +1,158 @@
+/* style.css */
+:root {
+  --earthy-dark: #3e2f2f;
+  --earthy-mid:  #a39f97;
+  --earthy-light:#d8c3a5;
+  --accent:      #8da47e;
+  --bg:          #faf4e3;
+  --text:        #2b2a28;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header & Nav */
+.site-header {
+  background: var(--earthy-dark);
+  color: var(--bg);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo { font-size: 1.5rem; }
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--bg);
+  cursor: pointer;
+  display: none;
+}
+.site-nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--bg);
+}
+.site-nav.active { display: block; }
+
+/* Hero */
+.hero {
+  background: url('placeholder-mountains.jpg') center/cover no-repeat;
+  text-align: center;
+  color: var(--bg);
+  padding: 6rem 0;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+.section h2 {
+  font-size: 2rem;
+  color: var(--earthy-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Story */
+.story-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.story-text, .story-photo {
+  flex: 1 1 300px;
+}
+.story-photo img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Details */
+.details ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.details li {
+  margin-bottom: 0.5rem;
+}
+.map-placeholder {
+  background: var(--earthy-light);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--earthy-mid);
+  border-radius: 8px;
+}
+
+/* Gallery */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+.photo-grid img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* RSVP */
+.rsvp p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+.rsvp a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--earthy-dark);
+  color: var(--bg);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-btn { display: block; }
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--earthy-dark);
+    padding: 1rem;
+    position: absolute;
+    top: 64px;
+    right: 0;
+  }
+  .site-nav a {
+    margin: 0.5rem 0;
+  }
+}
