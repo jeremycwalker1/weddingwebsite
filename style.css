@@ -54,10 +54,15 @@ body {
 
 /* Hero */
 .hero {
-  background: url('placeholder-mountains.jpg') center/cover no-repeat;
+  background: url('hero.jpg') center/cover no-repeat;
   text-align: center;
   color: var(--bg);
-  padding: 6rem 0;
+  /* if you want a full‑screen hero: */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
 }
 .hero h2 {
   font-size: 2.5rem;
